@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,36 +14,39 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
         .figma-gradient {
-         background: linear-gradient(135deg, #F24E1E, #FF7262, #A259FF, #1ABCFE, #0ACF83);
-         -webkit-background-clip: text;
-         -webkit-text-fill-color: transparent;
-         }
+            background: linear-gradient(135deg, #F24E1E, #FF7262, #A259FF, #1ABCFE, #0ACF83);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
     <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#c702ba',
-          background: '#FFFFFF',
-          text: '#333333'
-        },
-        backgroundImage: {
-          'gradient-primary': 'linear-gradient(to right, #FFD6D6, #F4C2C2, #FF8FA3)',
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#c702ba',
+                        background: '#FFFFFF',
+                        text: '#333333'
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(to right, #FFD6D6, #F4C2C2, #FF8FA3)',
+                    }
+                }
+            }
         }
-      }
-    }
-  }
-</script>
+    </script>
 </head>
+
 <body class="bg-background text-text">
     <!-- Navbar -->
     <nav class="bg-background shadow fixed w-full z-10 py-6 px-12">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-lg font-bold text-text">Kayla Rose Ca-ang</a>
             <button class="md:hidden text-gray-800 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -84,308 +88,421 @@
     <!-- Home Section -->
     <section id="home" class="flex flex-col md:flex-row items-center justify-center min-h-screen p-6">
         <div class="rounded-2xl overflow-hidden mb-8 md:mb-0">
-          <img src="images/home1.jpg" alt="Profile Picture" class="w-72 h-auto">
+            <img src="images/home1.jpg" alt="Profile Picture" class="w-72 h-auto">
         </div>
         <div class="md:ml-12 text-center md:text-left">
-          <p class="text-primary text-lg">Hello, I'm</p>
-          <h1 class="text-4xl font-extrabold text-text mt-2">
-            <span id="dynamic-name"></span>
-          </h1>
-          <h2 class="text-2xl text-text mt-2">
-            I'm a <span id="dynamic-role" class="text-primary text-lg-600"></span>
-          </h2>
-          <p class="mt-4 text-text max-w-md">
-            Passionate about creating elegant solutions through code and design. I focus on building clean, user-friendly experiences that solve real problems.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
-            <a href="#work" class="bg-primary text-background px-6 py-3 rounded-full hover:bg-pink-300 transition">View My Work</a>
-            <a href="#contact" class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-background transition">Contact Me</a>
-          </div>
+            <p class="text-primary text-lg">Hello, I'm</p>
+            <h1 class="text-4xl font-extrabold text-text mt-2">
+                <span id="dynamic-name"></span>
+            </h1>
+            <h2 class="text-2xl text-text mt-2">
+                I'm a <span id="dynamic-role" class="text-primary text-lg-600"></span>
+            </h2>
+            <p class="mt-4 text-text max-w-md">
+                Passionate about creating elegant solutions through code and design. I focus on building clean,
+                user-friendly experiences that solve real problems.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
+                <a href="#projects"
+                    class="bg-primary text-background px-6 py-3 rounded-full hover:bg-pink-300 transition">View My
+                    Work</a>
+                <a href="#contact"
+                    class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-background transition">Contact
+                    Me</a>
+            </div>
         </div>
-      </section>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="min-h-screen flex items-center justify-center bg-background text-text px-6 py-12">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          
-          <!-- Profile Image Card -->
-          <div class="relative rounded-lg overflow-hidden shadow-lg w-full md:w-1/2">
-            <img src="images/home.jpg" alt="Kayla Rose Ca-ang" class="object-cover w-full h-1/2 md:h-1/2 ">
-            <div class="absolute bottom-0 bg-gradient-to-t from-primary/70 to-transparent w-full p-6 text-center">
-              <h2 class="text-2xl font-bold text-background">Kayla Rose Ca-ang</h2>
-              <p class="text-background">BSIT Major in Software Engineering</p>
-            </div>
-          </div>
-      
-          <!-- About Text Section -->
-          <div class="bg-background rounded-lg shadow-lg w-full md:w-1/2 p-8 space-y-6">
-            <div class="flex items-center space-x-2">
-              <div class="w-3 h-3 rounded-full bg-red-400"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-              <div class="w-3 h-3 rounded-full bg-green-400"></div>
-            </div>
-            <h3 class="text-2xl font-semibold text-primary">// About Me</h3>
-            <p class="leading-relaxed">
-              Hi there! I'm <span class="font-semibold">Kayla Rose Ca-ang</span>, a 22-year-old 2nd year BSIT student majoring in Software Engineering at Lithan Academy.
-              I currently live in the vibrant town of Marilao, Bulacan, Philippines.
-            </p>
-            <p class="leading-relaxed">
-              My passion lies in creating impactful and innovative technology solutions — whether it's building better user experiences, 
-              solving real-world problems, or continuously pushing my skills in the ever-evolving world of IT.
-            </p>
-            <p class="leading-relaxed">
-              I believe that technology has the power to change lives, and I aspire to be part of that positive transformation through coding, designing, 
-              and innovating systems that truly make a difference.
-            </p>
-            <p class="leading-relaxed text-primary font-semibold text-lg">
-              🎉 Fun Fact: My birthday is on October 23! Only <span id="countdown" class="text-accent font-bold"></span> left! 🎂
-            </p>
-          </div>
-      
-        </div>
-      </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-20 px-4">
-    <div class="max-w-6xl w-full mx-auto">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Skills</h2>
-        <h3 class="text-xl font-bold text-center text-gray-800 mb-6">Tech</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- HTML -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fab fa-html5 text-orange-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">HTML</h3>
+            <!-- Profile Image Card -->
+            <div class="relative rounded-lg overflow-hidden shadow-lg w-full md:w-1/2">
+                <img src="images/home.jpg" alt="Kayla Rose Ca-ang" class="object-cover w-full h-1/2 md:h-1/2 ">
+                <div class="absolute bottom-0 bg-gradient-to-t from-primary/70 to-transparent w-full p-6 text-center">
+                    <h2 class="text-2xl font-bold text-background">Kayla Rose Ca-ang</h2>
+                    <p class="text-background">BSIT Major in Software Engineering</p>
+                </div>
             </div>
-            <!-- JavaScript -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fab fa-js text-yellow-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">JavaScript</h3>
+
+            <!-- About Text Section -->
+            <div class="bg-background rounded-lg shadow-lg w-full md:w-1/2 p-8 space-y-6">
+                <div class="flex items-center space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <h3 class="text-2xl font-semibold text-primary">// About Me</h3>
+                <p class="leading-relaxed">
+                    Hi there! I'm <span class="font-semibold">Kayla Rose Ca-ang</span>, a 22-year-old 2nd year BSIT
+                    student majoring in Software Engineering at Lithan Academy.
+                    I currently live in the vibrant town of Marilao, Bulacan, Philippines.
+                </p>
+                <p class="leading-relaxed">
+                    My passion lies in creating impactful and innovative technology solutions — whether it's building
+                    better user experiences,
+                    solving real-world problems, or continuously pushing my skills in the ever-evolving world of IT.
+                </p>
+                <p class="leading-relaxed">
+                    I believe that technology has the power to change lives, and I aspire to be part of that positive
+                    transformation through coding, designing,
+                    and innovating systems that truly make a difference.
+                </p>
+                <p class="leading-relaxed text-primary font-semibold text-lg">
+                    🎉 Fun Fact: My birthday is on October 23! Only <span id="countdown"
+                        class="text-accent font-bold"></span> left! 🎂
+                </p>
             </div>
-            <!-- CSS -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fab fa-css3-alt text-blue-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">CSS</h3>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+        <div class="max-w-6xl w-full mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Skills</h2>
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6">Tech</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- HTML -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fab fa-html5 text-orange-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">HTML</h3>
+                </div>
+                <!-- JavaScript -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fab fa-js text-yellow-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">JavaScript</h3>
+                </div>
+                <!-- CSS -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fab fa-css3-alt text-blue-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">CSS</h3>
+                </div>
+                <!-- Java -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fab fa-java text-red-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Java</h3>
+                </div>
+                <!-- Spring MVC -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fas fa-leaf text-green-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Spring MVC</h3>
+                </div>
+                <!-- Spring Security -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fas fa-shield-alt text-green-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Spring Security</h3>
+                </div>
+                <!-- Bootstrap -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fab fa-bootstrap text-purple-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Bootstrap</h3>
+                </div>
+                <!-- Tailwind -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fas fa-wind text-blue-400 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Tailwind</h3>
+                </div>
+                <!-- Laravel -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fab fa-laravel text-red-600 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Laravel</h3>
+                </div>
+                <!-- MySQL -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fas fa-database text-blue-600 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">MySQL</h3>
+                </div>
+                <!-- Power Automate -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <img src="https://logowik.com/content/uploads/images/microsoft-power-automate9918.logowik.com.webp"
+                        alt="Power Automate Icon" class="w-16 h-12 mx-auto mb-4">
+                    <h3 class="text-lg font-bold mt-4">Power Automate</h3>
+                </div>
+                <!-- Copilot Studio -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <img src="images/copilot studio.jpg" alt="Copilot Studio Icon"
+                        class="w-16 h-12 mx-auto mb-4 object-contain">
+                    <h3 class="text-lg font-bold mt-4">Microsoft Copilot Studio</h3>
+                </div>
+                <!-- Axure RP -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fa-solid fa-pen-ruler text-blue-600 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Axure RP</h3>
+                </div>
+                <!-- Figma -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fa-brands fa-figma text-5xl figma-gradient"></i>
+                    <h3 class="text-lg font-bold mt-4">Figma</h3>
+                </div>
             </div>
-            <!-- Java -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fab fa-java text-red-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Java</h3>
-            </div>
-            <!-- Spring MVC -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fas fa-leaf text-green-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Spring MVC</h3>
-            </div>
-            <!-- Spring Security -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fas fa-shield-alt text-green-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Spring Security</h3>
-            </div>
-            <!-- Bootstrap -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fab fa-bootstrap text-purple-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Bootstrap</h3>
-            </div>
-            <!-- Tailwind -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fas fa-wind text-blue-400 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Tailwind</h3>
-            </div>
-            <!-- MySQL -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fas fa-database text-blue-600 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">MySQL</h3>
-            </div>
-            <!-- Power Automate -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <img src="https://logowik.com/content/uploads/images/microsoft-power-automate9918.logowik.com.webp" alt="Power Automate Icon" class="w-16 h-12 mx-auto mb-4">
-                <h3 class="text-lg font-bold mt-4">Power Automate</h3>
-            </div>
-            <!-- Copilot Studio -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <img src="images/copilot studio.jpg" alt="Copilot Studio Icon" class="w-16 h-12 mx-auto mb-4 object-contain">
-                <h3 class="text-lg font-bold mt-4">Microsoft Copilot Studio</h3>
-            </div>
-            <!-- Axure RP -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fa-solid fa-pen-ruler text-blue-600 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Axure RP</h3>
-            </div>
-            <!-- Figma -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fa-brands fa-figma text-5xl figma-gradient"></i>
-                <h3 class="text-lg font-bold mt-4">Figma</h3>
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6 mt-8">Professional</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Time Management -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fa-solid fa-business-time text-orange-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Time Management</h3>
+                </div>
+                <!-- Adaptability -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fa-solid fa-arrows-rotate text-yellow-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Adaptability</h3>
+                </div>
+                <!-- Team Work -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fa-solid fa-users text-blue-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Team Work</h3>
+                </div>
+                <!-- Communication -->
+                <div class="bg-white shadow rounded p-4 text-center">
+                    <i class="fa-solid fa-comments text-red-500 text-5xl"></i>
+                    <h3 class="text-lg font-bold mt-4">Communication</h3>
+                </div>
             </div>
         </div>
-        <h3 class="text-xl font-bold text-center text-gray-800 mb-6 mt-8">Professional</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Time Management -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fa-solid fa-business-time text-orange-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Time Management</h3>
-            </div>
-            <!-- Adaptability -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fa-solid fa-arrows-rotate text-yellow-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Adaptability</h3>
-            </div>
-            <!-- Team Work -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fa-solid fa-users text-blue-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Team Work</h3>
-            </div>
-            <!-- Communication -->
-            <div class="bg-white shadow rounded p-4 text-center">
-                <i class="fa-solid fa-comments text-red-500 text-5xl"></i>
-                <h3 class="text-lg font-bold mt-4">Communication</h3>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<!-- Education Timeline Section -->
-<section id="education" class="py-20 px-6 md:px-12">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Educational Journey</h2>
-        
-        <!-- Timeline Container -->
-        <div class="relative">
-            <!-- Timeline Line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
-            
-            <!-- Timeline Items -->
-            <div class="space-y-12">
-                <!-- Current Education - FCPC -->
-                <div class="relative flex">
-                    <!-- Left Content -->
-                    <div class="w-1/2 pr-8 text-right">
-                        <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
-                            <img src="images/fcpc.png" alt="FCPC Logo" class="w-24 h-24 mx-auto mb-4 object-contain">
-                            <h3 class="text-xl font-semibold text-gray-800">First City Providential College</h3>
-                            <p class="text-blue-600 font-medium">Bachelor of Science in Information Technology</p>
-                            <p class="text-gray-600">2023 - Present</p>
+    <!-- Education Timeline Section -->
+    <section id="education" class="py-20 px-6 md:px-12">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Educational Journey</h2>
+
+            <!-- Timeline Container -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Current Education - FCPC -->
+                    <div class="relative flex">
+                        <!-- Left Content -->
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
+                                <img src="images/fcpc.png" alt="FCPC Logo"
+                                    class="w-24 h-24 mx-auto mb-4 object-contain">
+                                <h3 class="text-xl font-semibold text-gray-800">First City Providential College</h3>
+                                <p class="text-blue-600 font-medium">Bachelor of Science in Information Technology</p>
+                                <p class="text-gray-600">2023 - Present</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Dot -->
+                        <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2">
+                        </div>
+                        <!-- Right Empty Space -->
+                        <div class="w-1/2"></div>
+                    </div>
+
+                    <!-- Lithan Academy -->
+                    <div class="relative flex">
+                        <!-- Left Empty Space -->
+                        <div class="w-1/2"></div>
+                        <!-- Timeline Dot -->
+                        <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2">
+                        </div>
+                        <!-- Right Content -->
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
+                                <img src="images/lithan.png" alt="Lithan Academy Logo"
+                                    class="w-24 h-24 mx-auto mb-4 object-contain">
+                                <h3 class="text-xl font-semibold text-gray-800">Lithan Academy Singapore</h3>
+                                <p class="text-blue-600 font-medium">Software Engineering</p>
+                                <p class="text-gray-600">2023 - Present</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Timeline Dot -->
-                    <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
-                    <!-- Right Empty Space -->
-                    <div class="w-1/2"></div>
-                </div>
 
-                <!-- Lithan Academy -->
-                <div class="relative flex">
-                    <!-- Left Empty Space -->
-                    <div class="w-1/2"></div>
-                    <!-- Timeline Dot -->
-                    <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
-                    <!-- Right Content -->
-                    <div class="w-1/2 pl-8">
-                        <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
-                            <img src="images/lithan.png" alt="Lithan Academy Logo" class="w-24 h-24 mx-auto mb-4 object-contain">
-                            <h3 class="text-xl font-semibold text-gray-800">Lithan Academy Singapore</h3>
-                            <p class="text-blue-600 font-medium">Software Engineering</p>
-                            <p class="text-gray-600">2023 - Present</p>
+                    <!-- High School - JMC -->
+                    <div class="relative flex">
+                        <!-- Left Content -->
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
+                                <img src="images/jmc.png" alt="JMC Logo" class="w-24 h-24 mx-auto mb-4 object-contain">
+                                <h3 class="text-xl font-semibold text-gray-800">Jose Maria College</h3>
+                                <p class="text-blue-600 font-medium">Senior High School</p>
+                                <p class="text-gray-600">2022 - 2023</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- High School - JMC -->
-                <div class="relative flex">
-                    <!-- Left Content -->
-                    <div class="w-1/2 pr-8 text-right">
-                        <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
-                            <img src="images/jmc.png" alt="JMC Logo" class="w-24 h-24 mx-auto mb-4 object-contain">
-                            <h3 class="text-xl font-semibold text-gray-800">Jose Maria College</h3>
-                            <p class="text-blue-600 font-medium">Senior High School</p>
-                            <p class="text-gray-600">2022 - 2023</p>
+                        <!-- Timeline Dot -->
+                        <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2">
                         </div>
-                    </div>
-                    <!-- Timeline Dot -->
-                    <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
-                    <!-- Right Empty Space -->
-                    <div class="w-1/2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="py-20">
-    <div class="container mx-auto px-12">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Project 1 -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
-                <img src="images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h5 class="text-lg font-bold mb-2">Project 1</h5>
-                    <p class="text-gray-600 mb-4">Description of the first project, highlighting its purpose and technologies used.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">HTML</span>
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">CSS</span>
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
-                <img src="images/project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h5 class="text-lg font-bold mb-2">Project 2</h5>
-                    <p class="text-gray-600 mb-4">Description of the second project, highlighting its purpose and technologies used.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Tailwind CSS</span>
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">React</span>
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Node.js</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="bg-white shadow rounded-lg overflow-hidden">
-                <img src="images/project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h5 class="text-lg font-bold mb-2">Project 3</h5>
-                    <p class="text-gray-600 mb-4">Description of the third project, highlighting its purpose and technologies used.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Java</span>
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Spring Boot</span>
-                        <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">MySQL</span>
+                        <!-- Right Empty Space -->
+                        <div class="w-1/2"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact</h2>
-        <p class="text-gray-600 text-center mb-8">Feel free to reach out by filling out the form below.</p>
-        <form class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
-            <div class="mb-4">
-                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name" required>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-12">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden">
+                    <img src="images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h5 class="text-lg font-bold mb-2">Project 1</h5>
+                        <p class="text-gray-600 mb-4">Description of the first project, highlighting its purpose and
+                            technologies used.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">HTML</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">CSS</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project1" target="_blank"
+                            class="text-primary hover:text-pink-500 transition">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden">
+                    <img src="images/project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h5 class="text-lg font-bold mb-2">Project 2</h5>
+                        <p class="text-gray-600 mb-4">Description of the second project, highlighting its purpose and
+                            technologies used.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Tailwind
+                                CSS</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">React</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Node.js</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project2" target="_blank"
+                            class="text-primary hover:text-pink-500 transition">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white shadow rounded-lg overflow-hidden">
+                    <img src="images/project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h5 class="text-lg font-bold mb-2">Project 3</h5>
+                        <p class="text-gray-600 mb-4">Description of the third project, highlighting its purpose and
+                            technologies used.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Java</span>
+                            <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Spring
+                                Boot</span>
+                            <span
+                                class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">MySQL</span>
+                        </div>
+                        <a href="https://github.com/yourusername/project3" target="_blank"
+                            class="text-primary hover:text-pink-500 transition">View Repository</a>
+                    </div>
+                </div>
             </div>
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Email" required>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact</h2>
+            <p class="text-gray-600 text-center mb-8">Feel free to reach out by filling out the form below or using my
+                contact information.</p>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-10 mb-10">
+                <!-- Contact Info -->
+                <div class="bg-white shadow-md rounded-lg p-6 flex-1">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Contact Information</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li>
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            Marilao, Bulacan, Philippines
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope text-primary mr-2"></i>
+                            <a href="mailto:kaylarosecaang206@gmail.com"
+                                class="hover:underline">kaylarosecaang206@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone text-primary mr-2"></i>
+                            <a href="tel:+639955467804" class="hover:underline">+63 995 546 7804</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-share-alt text-primary mr-2"></i>
+                            <span>Socials:</span>
+                            <a href="https://www.facebook.com/kaylacaang/" target="_blank"
+                                class="ml-2 text-gray-600 hover:underline"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/kayla-rose-ca-ang/" target="_blank"
+                                class="ml-2 text-gray-700 hover:underline"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/KayrusDev" target="_blank"
+                                class="ml-2 text-gray-800 hover:underline"><i class="fab fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact Form -->
+                <form action="https://formspree.io/f/mqadewjp" method="POST"
+                    class="max-w-lg w-full bg-white shadow-md rounded-lg p-6 flex-1">
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    <!-- Success message placeholder -->
+                    <div id="form-success" class="hidden mb-4 text-green-600 font-semibold"></div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Your Message" required></textarea>
+                    </div>
+                    <!-- You can add more fields here if needed -->
+                    <button type="submit"
+                        class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Send</button>
+                </form>
             </div>
-            <div class="mb-4">
-                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Send Message</button>
-        </form>
-    </div>
-</section>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-gray-800 text-white">
         <p>&copy; Kayla Rose Ca-ang | 2024</p>
     </footer>
     <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form[action^='https://formspree.io']");
+            const successDiv = document.getElementById("form-success");
+            if (form) {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const data = new FormData(form);
+                    fetch(form.action, {
+                        method: "POST",
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            if (successDiv) {
+                                successDiv.textContent = "Thank you for your message! I'll get back to you soon.";
+                                successDiv.classList.remove("hidden");
+                            } else {
+                                alert("Thank you for your message! I'll get back to you soon.");
+                            }
+                            form.reset();
+                        } else {
+                            alert("Oops! There was a problem submitting your form.");
+                        }
+                    }).catch(error => {
+                        alert("Oops! There was a problem submitting your form.");
+                    });
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>

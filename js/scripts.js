@@ -73,31 +73,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     sections.forEach(section => observer.observe(section));
 });
-    document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper-container', {
-            loop: true, // Enable looping
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true, // Allow clicking on pagination bullets
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, // Enable looping
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Allow clicking on pagination bullets
+        },
+        slidesPerView: 1, // Show one slide at a time
+        spaceBetween: 20, // Add spacing between slides
+        breakpoints: {
+            768: {
+                slidesPerView: 2, // Show 2 slides on medium screens
             },
-            slidesPerView: 1, // Show one slide at a time
-            spaceBetween: 20, // Add spacing between slides
-            breakpoints: {
-                768: {
-                    slidesPerView: 2, // Show 2 slides on medium screens
-                },
-                1024: {
-                    slidesPerView: 3, // Show 3 slides on large screens
-                },
+            1024: {
+                slidesPerView: 3, // Show 3 slides on large screens
             },
-        });
+        },
     });
-  function updateCountdown() {
+});
+function updateCountdown() {
     const now = new Date();
     const currentYear = now.getFullYear();
     let birthday = new Date(`October 23, ${currentYear}`);
     if (now > birthday) {
-      birthday = new Date(`October 23, ${currentYear + 1}`);
+        birthday = new Date(`October 23, ${currentYear + 1}`);
     }
     const diff = birthday - now;
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const seconds = Math.floor((diff / 1000) % 60);
 
     document.getElementById('countdown').textContent =
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
