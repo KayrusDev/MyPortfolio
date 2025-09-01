@@ -87,32 +87,49 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="flex flex-col md:flex-row items-center justify-center min-h-screen p-6">
-        <div class="rounded-2xl overflow-hidden mb-8 md:mb-0">
-            <img src="images/home1.jpg" alt="Profile Picture" class="w-72 h-auto">
+<section id="home" class="flex flex-col md:flex-row items-center justify-center min-h-screen p-6">
+    <div class="rounded-2xl overflow-hidden mb-8 md:mb-0">
+        <img src="images/home1.jpg" alt="Profile Picture" class="w-72 h-auto">
+    </div>
+    <div class="md:ml-12 text-center md:text-left">
+        <p class="text-primary text-lg">Hello, I'm</p>
+        <h1 class="text-4xl font-extrabold text-text mt-2">
+            <span id="dynamic-name"></span>
+        </h1>
+        <h2 class="text-2xl text-text mt-2">
+            I'm a <span id="dynamic-role" class="text-primary text-lg-600"></span>
+        </h2>
+        <p class="mt-4 text-text max-w-md">
+            Passionate about creating elegant solutions through code and design. I focus on building clean,
+            user-friendly experiences that solve real problems.
+        </p>
+
+        <!-- Main Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
+            <a href="#projects"
+                class="bg-primary text-background px-6 py-3 rounded-full hover:bg-pink-300 transition">View My
+                Work</a>
+            <a href="#contact"
+                class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-background transition">Contact
+                Me</a>
         </div>
-        <div class="md:ml-12 text-center md:text-left">
-            <p class="text-primary text-lg">Hello, I'm</p>
-            <h1 class="text-4xl font-extrabold text-text mt-2">
-                <span id="dynamic-name"></span>
-            </h1>
-            <h2 class="text-2xl text-text mt-2">
-                I'm a <span id="dynamic-role" class="text-primary text-lg-600"></span>
-            </h2>
-            <p class="mt-4 text-text max-w-md">
-                Passionate about creating elegant solutions through code and design. I focus on building clean,
-                user-friendly experiences that solve real problems.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
-                <a href="#projects"
-                    class="bg-primary text-background px-6 py-3 rounded-full hover:bg-pink-300 transition">View My
-                    Work</a>
-                <a href="#contact"
-                    class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-background transition">Contact
-                    Me</a>
-            </div>
+
+        <!-- Resume & Video Links -->
+        <div class="flex flex-row gap-6 mt-8 justify-center md:justify-start">
+            <!-- Download Resume -->
+            <a href="files/My_Resume.pdf" download
+                class="flex items-center gap-2 text-primary hover:text-pink-400 transition text-lg">
+                <i class="fas fa-file-download"></i> Resume
+            </a>
+
+            <!-- Video Introduction -->
+            <a href="https://youtu.be/ANPcd-T46zw" target="_blank"
+                class="flex items-center gap-2 text-primary hover:text-pink-400 transition text-lg">
+                <i class="fas fa-play-circle"></i> Introduction
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="min-h-screen flex items-center justify-center bg-background text-text px-6 py-12">
@@ -353,7 +370,7 @@
                             <span
                                 class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Java</span>
                         </div>
-                        <a href="https://github.com/yourusername/project1" target="_blank"
+                        <a href="https://github.com/KayrusDev/North-Sussex-Judo-Calculator" target="_blank"
                             class="text-primary hover:text-pink-500 transition">View Repository</a>
                     </div>
                 </div>
@@ -434,7 +451,7 @@
                         <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Tailwind</span>
                         <span class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">Spring Boot</span>
                     </div>
-                    <a href="https://github.com/yourusername/task-manager" target="_blank"
+                    <a href="https://github.com/KayrusDev/Meals-on-Wheels" target="_blank"
                         class="text-primary hover:text-pink-500 transition">View Repository</a>
                 </div>
             </div>
