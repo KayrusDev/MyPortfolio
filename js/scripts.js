@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dynamicName = document.getElementById("dynamic-name");
     const dynamicRole = document.getElementById("dynamic-role");
 
-    const nameText = "Kayla Rose Ca-ang";
+    const nameText = "KAYLA ROSE CA-ANG";
     const roleTexts = [
         "Frontend Developer",
         "Backend Developer",
