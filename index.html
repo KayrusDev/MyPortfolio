@@ -420,7 +420,8 @@
                     <div class="p-4">
                         <h5 class="text-lg font-bold mb-2">Dobu Martial Arts</h5>
                         <p class="text-gray-600 mb-4">A multi-page, responsive website for DuBo Martial Arts, featuring
-                            membership management, class schedules, and social integration. Focused on user experience and accessibility.</p>
+                            membership management, class schedules, and social integration. Focused on user experience
+                            and accessibility.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span
                                 class="bg-blue-100 text-blue-600 text-sm font-medium px-2 py-1 rounded-full">HTML</span>
@@ -565,6 +566,14 @@
         </div>
     </section>
 
+    <!-- Music Toggle Button -->
+    <button id="music-toggle"
+        class="fixed bottom-8 right-8 z-50 bg-primary text-background rounded-full shadow-lg w-14 h-14 flex items-center justify-center text-2xl hover:bg-background hover:text-primary transition duration-300"
+        aria-label="Toggle Music">
+        <i id="music-icon" class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" src="music.mp3" loop></audio>
+
     <!-- Footer -->
     <footer class="text-center font-bold py-4 bg-background shadow text-text shadow-md">
         <p>&copy; Kayla Rose Ca-ang | 2024</p>
@@ -587,6 +596,31 @@
                         });
                 });
             }
+        });
+    </script>
+    <script>
+        // Automatically play music on load
+        window.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('background-music');
+            const toggleBtn = document.getElementById('music-toggle');
+            const icon = document.getElementById('music-icon');
+
+            // Try to play music automatically (may require user interaction in some browsers)
+            audio.volume = 0.15;
+            audio.play().catch(() => { });
+
+            // Toggle play/pause on button click
+            toggleBtn.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play();
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-music');
+                } else {
+                    audio.pause();
+                    icon.classList.remove('fa-music');
+                    icon.classList.add('fa-play');
+                }
+            });
         });
     </script>
 </body>
