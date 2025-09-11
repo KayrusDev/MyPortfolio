@@ -57,13 +57,49 @@
     <nav class="bg-background shadow fixed w-full z-10 py-6 px-12">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-lg font-bold text-text">Kayla Rose Ca-ang</a>
-            <button class="md:hidden text-gray-800 focus:outline-none">
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
+            <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6">
+                <li>
+                    <a href="#home" class="nav-link flex items-center text-text hover:text-primary">
+                        <i class="fas fa-home mr-2"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link flex items-center text-text hover:text-primary">
+                        <i class="fas fa-user mr-2"></i> About
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link flex items-center text-text hover:text-primary">
+                        <i class="fas fa-tools mr-2"></i> Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#education" class="nav-link flex items-center text-text hover:text-primary">
+                        <i class="fas fa-graduation-cap mr-2"></i> Education
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link flex items-center text-text hover:text-primary">
+                        <i class="fas fa-project-diagram mr-2"></i> Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link flex items-center text-text hover:text-primary">
+                        <i class="fas fa-envelope mr-2"></i> Contact
+                    </a>
+                </li>
+            </ul>
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu"
+                class="absolute top-full left-0 w-full bg-background shadow-md flex flex-col space-y-4 py-6 px-12 md:hidden hidden">
                 <li>
                     <a href="#home" class="nav-link flex items-center text-text hover:text-primary">
                         <i class="fas fa-home mr-2"></i> Home
@@ -371,7 +407,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -565,6 +601,21 @@
     <script src="js/scripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Hamburger menu functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                // Hide mobile menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
             const form = document.getElementById("contact-form");
             const successDiv = document.getElementById("form-success");
             if (form) {
